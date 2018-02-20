@@ -54,14 +54,14 @@ function observador(){
   } else {
     // User is signed out.
     console.log('no existe usuario activo')
-    contenido.innerHTML = `<div class="alert alert-primary" role="alert">No has iniciado seción</div>`;
+    contenido.innerHTML = `<div class="alert alert-primary" role="alert">No has iniciado sesión</div>`;
     // ...
   }
 });
 }
 observador();
 
-// Función que contruye el dom en caso de haber iniciado seción
+// Función que contruye el dom en caso de haber iniciado sesión
 function aparece(user){
   var user = user;
   var contenido = document.getElementById('contenido');
@@ -72,7 +72,7 @@ function aparece(user){
   }
 }
 
-// Función que cierra seción
+// Función que cierra sesión
 function cerrar(){
   firebase.auth().signOut()
   // Respuesta positiva
@@ -85,19 +85,4 @@ function cerrar(){
   })
 }
 
-// Función que envía un correo al usuario que se está creando
-function verificar(){
-  var user = firebase.auth().currentUser;
-  user.sendEmailVerification().then(function() {
-  // Email sent.
-  console.log('Enviando correo...');
-}).catch(function(error) {
-  // An error happened.
-  console.log(error);
-});
-}
 
-/*Modal*/
-$('#myModal').on('shown.bs.modal', function () {
-  $('#myInput').focus()
-})
