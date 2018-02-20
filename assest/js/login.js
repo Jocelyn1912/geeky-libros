@@ -54,7 +54,7 @@ function observador(){
   } else {
     // User is signed out.
     console.log('no existe usuario activo')
-    contenido.innerHTML = `<div class="container"><div class="alert alert-primary" role="alert">No has iniciado seción</div></div>`;
+    contenido.innerHTML = `<div class="alert alert-primary" role="alert">No has iniciado seción</div>`;
     // ...
   }
 });
@@ -66,9 +66,9 @@ function aparece(user){
   var user = user;
   var contenido = document.getElementById('contenido');
   if (user.emailVerified) {
-    contenido.innerHTML = `<div class="container"><div class="alert alert-success" role="alert">
+    contenido.innerHTML = `<div class="alert alert-success" role="alert">
   <h4 class="alert-heading">Bienvenido! ${user.email}</h4>
-  <p class="mb-0">Whenever you need to, be sure to use margin utilities to keep things nice and tidy.</p><button onclick="cerrar()" class="btn btn-danger">Cerrar sesión</button></div>`;
+  <p>Whenever you need to, be sure to use margin utilities to keep things nice and tidy.</p><button onclick="cerrar()" class="btn btn-danger">Cerrar sesión</button>`;
   }
 }
 
@@ -96,3 +96,8 @@ function verificar(){
   console.log(error);
 });
 }
+
+/*Modal*/
+$('#myModal').on('shown.bs.modal', function () {
+  $('#myInput').focus()
+})

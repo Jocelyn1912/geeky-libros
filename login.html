@@ -21,18 +21,16 @@
   </script>
 </head>
 <body>
-  <div class="container mt-3">
-    <nav class="navbar navbar navbar-dark bg-primary justify-content-between">
-      <a class="navbar-brand">Navbar</a>
-      <div class="form-inline">
-        <input id="email2" type="email" placeholder="Ingresa email" class="form-control form-control-sm mr-sm-2">
-  <input id="password2" type="password" placeholder="ingresa contraseña" class="form-control form-control-sm mr-sm-2">
-        <button onclick="ingreso()" class="btn btn-dark my-2 my-sm-0 btn-sm">Acceder</button>
-        <button class="btn btn-danger my-2 my-sm-0 btn-sm ml-2" data-toggle="modal" data-target="#exampleModalLong">Registrar</button>
-      </div>
-    </nav>
-  </div>
-  <!-- Modal -->
+  <nav class="navbar navbar navbar-dark bg-primary justify-content-between">
+    <a class="navbar-brand">Navbar</a>
+    <div class="form-inline">
+      <input id="email2" type="email" placeholder="Ingresa email" class="form-control form-control-sm mr-sm-2">
+      <input id="password2" type="password" placeholder="ingresa contraseña" class="form-control form-control-sm mr-sm-2">
+      <button onclick="ingreso()" class="btn btn-dark my-2 my-sm-0 btn-sm">Acceder</button>
+      <button class="btn btn-danger my-2 my-sm-0 btn-sm ml-2" data-toggle="modal" data-target="#exampleModalLong">Registrar</button>
+    </div>
+  </nav>
+
 <div class="modal fade" id="exampleModalLong" tabindex="-1" role="dialog" aria-labelledby="exampleModalLongTitle" aria-hidden="true">
   <div class="modal-dialog" role="document">
     <div class="modal-content">
@@ -54,13 +52,14 @@
     </div>
   </div>
 </div>
+
   <!-- Contenedor que puede ver usuario registrado -->
   <div id="contenido">
     
   </div>
   <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
-  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
 
   <script src="assest/js/login.js"></script>
 </body>
