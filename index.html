@@ -3,11 +3,13 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
- <title>GeekyLibros</title>
+  <title>geekyBooks</title>
  <!-- Latest compiled and minified CSS -->
+  <link rel="icon" type="image/png" href="assest/img/favicomatic/favicon-32x32.png" sizes="32x32" />
+  <link rel="icon" type="image/png" href="assest/img/favicomatic/favicon-16x16.png" sizes="16x16" />
+
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
   <link rel="stylesheet" type="text/css" href="assest/css/main.css">
-  <link rel="stylesheet" href="assest/css/login.css">
   <!-- Iniciando Firebase -->
   <script src="https://www.gstatic.com/firebasejs/4.10.0/firebase.js"></script>
   <script>
@@ -39,7 +41,7 @@
     </div>
 
     <!-- Collect the nav links, forms, and other content for toggling -->
-    <div class="navbar-form navbar-left">
+    <div class="navbar-form navbar-left" id="navIngreso">
         <div class="form-group">
           <input id="email2" type="email" placeholder="Ingresa email" class="form-control form-control-sm mr-sm-2">
       <input id="password2" type="password" placeholder="ingresa contraseña" class="form-control form-control-sm mr-sm-2">
@@ -72,18 +74,40 @@
   </div>
 </div>
 
-  <div class="container">
-    <input id="keyword" type="text">
-    <button id="search">Buscar</button>
-    <div id="libros"></div>
-  </div>
-
-<!--<button id="prueba">prueba</button>-->
-
 <!-- Contenedor que puede ver usuario registrado -->
   <div id="contenido">
     
   </div>
+
+
+  <div class="container hidden" id="containerLibro">
+    <div>
+    <div class="buscador">
+      <input id="keyword" type="text" placeholder="¿Qué lenguaje buscas?">
+      <button id="search">Buscar</button>
+    </div>
+  </div>
+    <div id="libros"></div>
+  </div>
+
+<!-- modal -->
+  <div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h2 class="modal-title" id="myModalLabel">Ficha</h2> 
+        <img src="assest/img/lentes.png">
+      </div>
+      <div class="modal-body">
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="cerrar" data-dismiss="modal">Cerrar</button>
+      </div>
+    </div>
+  </div>
+</div>
+<!-- modal -->
+
 <script
   src="https://code.jquery.com/jquery-3.3.1.min.js"
   integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
@@ -91,6 +115,5 @@
   <!-- Latest compiled and minified JavaScript -->
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
 <script src="assest/js/app.js"></script>
-<script src="assest/js/login.js"></script>
 </body>
 </html>
