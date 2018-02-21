@@ -3,8 +3,11 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
- <title>GeekyLibros</title>
+  <title>geekyBooks</title>
  <!-- Latest compiled and minified CSS -->
+  <link rel="icon" type="image/png" href="assest/img/favicomatic/favicon-32x32.png" sizes="32x32" />
+  <link rel="icon" type="image/png" href="assest/img/favicomatic/favicon-16x16.png" sizes="16x16" />
+
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
   <link rel="stylesheet" type="text/css" href="assest/css/main.css">
 </head>
@@ -25,7 +28,7 @@
     <!-- Collect the nav links, forms, and other content for toggling -->
     <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
       <ul class="nav navbar-nav">
-        <li><a>Cerrar Sesión</a></li>
+       
       </ul>
       
     </div><!-- /.navbar-collapse -->
@@ -33,15 +36,33 @@
 </nav>
 
 
-
-
   <div class="container">
-    <input id="keyword" type="text">
-    <button id="search">Buscar</button>
+    <div>
+    <div class="buscador">
+      <input id="keyword" type="text" placeholder="¿Qué lenguaje buscas?">
+      <button id="search">Buscar</button>
+    </div>
+  </div>
     <div id="libros"></div>
   </div>
 
-<!--<button id="prueba">prueba</button>-->
+<!-- modal -->
+  <div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h2 class="modal-title" id="myModalLabel">Ficha</h2> 
+        <img src="assest/img/lentes.png">
+      </div>
+      <div class="modal-body">
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="cerrar" data-dismiss="modal">Cerrar</button>
+      </div>
+    </div>
+  </div>
+</div>
+<!-- modal -->
 
 <script
   src="https://code.jquery.com/jquery-3.3.1.min.js"
