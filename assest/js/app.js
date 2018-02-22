@@ -54,7 +54,7 @@ function observador(){
   } else {
     // User is signed out.
     console.log('no existe usuario activo')
-    contenido.innerHTML = `<div class="alert alert-primary" role="alert">No has iniciado sesión</div>`;
+    contenido.innerHTML = `<div class="alert alert-primary" role="alert"><img src="assest/img/laptop.png" class="img-responsive"><h3>Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam.</h3></div>`;
     // ...
   }
 });
@@ -104,43 +104,3 @@ $('#search').click(function() {
     });//llamada 1
   });// funcion search
 
-
-/*
-$('#prueba').click(function() {
-  var string = "https://openlibra.com/book/javascript-inspirate";
-  var separar = string.split("/");
-  var url = "https://openlibra.com/es/book/download/" + separar[4];
-  console.log(url);
-});
-*/
-
-
-
-
-/*
-id
-author
-categories:[]
-content /reseña
-content_short
-cover
-language
-num_comments
-pages
-publisher
-publisher_date
-tags:[]
-thumbnail
-title
-
-https://openlibra.com/es/book/download/javascript-inspirate
-https://openlibra.com/book/javascript-inspirate
-
-
-https://openlibra.com/es/book/download/mongodb-en-espanol-t1-el-principio
-https://openlibra.com/book/mongodb-en-espanol-t1-el-principio
-
-'http://www.etnassoft.com/api/v1/get/?get_categories=all&callback=?'
-
-'http://www.etnassoft.com/api/v1/get/?any_tags=[javascript]&lang=spanish&callback=?'
-*/
