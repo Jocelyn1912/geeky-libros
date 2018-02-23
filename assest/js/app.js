@@ -5,6 +5,7 @@ function registrar(){
   // Si el usuario se registró correctamente
   firebase.auth().createUserWithEmailAndPassword(email, password)
   .then(function(){
+    // Enviando correo de verificación
     verificar()
   })
 
@@ -83,6 +84,18 @@ function cerrar(){
   .catch(function(error){
     console.log('error');
   })
+}
+
+// Función que verifica correo electrónico
+function verificar(){
+  var user = firebase.auth().currentUser;
+  user.sendEmailVerification().then(function() {
+  // Email sent.
+  console.log('enviando correo...')
+}).catch(function(error) {
+  // An error happened.
+  console.log(error);
+  });
 }
 
 //const lang = $(this).val();
