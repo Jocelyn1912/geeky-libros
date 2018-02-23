@@ -69,6 +69,8 @@ function aparece(user){
   if (user.emailVerified) {
     var containerLibro = document.getElementById('containerLibro');
     containerLibro.classList.remove('hidden');
+    var navIngreso = document.getElementById('navIngreso');
+    navIngreso.classList.add('hidden');
     contenido.innerHTML = `<button onclick="cerrar()" class="btn btn-danger">Cerrar sesión</button>`;
   }
 }
@@ -81,6 +83,8 @@ function cerrar(){
     console.log('Saliendo...');
     var containerLibro = document.getElementById('containerLibro');
     containerLibro.classList.add('hidden');
+    var navIngreso = document.getElementById('navIngreso');
+    navIngreso.classList.remove('hidden');
 
   })
   //Respuesta negativa
