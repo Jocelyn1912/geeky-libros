@@ -79,6 +79,9 @@ function cerrar(){
   // Respuesta positiva
   .then(function(){
     console.log('Saliendo...');
+    var containerLibro = document.getElementById('containerLibro');
+    containerLibro.classList.add('hidden');
+
   })
   //Respuesta negativa
   .catch(function(error){
